@@ -32,9 +32,27 @@ or [this one](https://gist.github.com/jirutka/b15c31b2739a4f3eab63) written in P
 Requirements
 ------------
 
-* Python 3.3+ or 2.7+
+* Python ~~3.3+~~ or 2.7+
 * [pyldap] \(or [python-ldap])
 * [docopt]
+
+Currently python3 does not work with python-ldap 
+
+For Ubuntu Apt based Systems:
+
+`sudo apt-get install libsasl2-dev python-dev libldap2-dev libssl-dev`
+
+For redhat yum based systems:
+
+`sudo yum install python-devel openldap-devel`
+
+Then install:
+
+```
+pip install python-ldap 
+# pip should be running python2 not python3
+pip docopt
+```
 
 You can install both Python modules from PyPI.
 pyldap (and python-ldap) requires additional system dependencies – OpenLDAP.
